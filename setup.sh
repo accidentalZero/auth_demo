@@ -13,3 +13,6 @@ fi
 source ./env/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
+
+# Для того чтобы убрать ошибку 
+sed -i 's/version = _bcrypt.__about__.__version__/version = _bcrypt.__version__/g' ./env/lib64/python3.11/site-packages/passlib/handlers/bcrypt.py
